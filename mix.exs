@@ -18,12 +18,13 @@ defmodule NBP.MixProject do
 
   def application do
     [
-      extra_applications: [:logger, :crypto]
+      extra_applications: [:logger, :crypto, :xmerl]
     ]
   end
 
   defp deps do
     [
+      {:decimal, "~> 2.0"},
       {:tesla, "~> 1.4"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
     ]
