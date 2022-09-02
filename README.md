@@ -23,9 +23,9 @@ end
 ## Additional dependencies
 
 As it uses [Tesla](https://github.com/teamon/tesla) underneath, you
-have to follow its installation instructions. Specifically, you have to
-install JSON library and you probably should install a HTTP client library
-as default HTTP client based on `httpc` does not validate SSL certificates.
+have to follow its installation instructions. Specifically, you probably 
+should install a HTTP client library as default HTTP client based on `httpc` 
+does not validate SSL certificates.
 
 For example, add Hackney to the dependencies in `mix.exs`:
 
@@ -44,18 +44,19 @@ config :tesla, adapter: Tesla.Adapter.Hackney
 ```
 
 See [Tesla](https://github.com/teamon/tesla)'s README for list of
-supported HTTP and JSON libraries.
+supported HTTP libraries.
 
 ## Configuration
 
 ### Base URL
 
-By default, the API sends requests to the production API. If you want to
-send it anywhere else, e.g. for proxying through some other service, you 
+By default, the API sends requests to the production API over HTTPS. 
+If you want to send it anywhere else, e.g. you want to disable HTTPS and
+use plain HTTP or you want to proxy requests through some other service, you 
 can add the following to the `config/config.exs`:
 
 ```elixir
-config :nbp, :base_url, "https://api.example.com"
+config :nbp, :base_url, "https://example.com"
 ```
 
 ### User Agent
