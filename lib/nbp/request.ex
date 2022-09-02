@@ -30,7 +30,7 @@ defmodule NBP.Request do
   defp client() do
     Tesla.client([
       {Tesla.Middleware.BaseUrl,
-       Application.get_env(:nbp, :base_url, "http://api.nbp.pl")},
+       Application.get_env(:nbp, :base_url, "https://api.nbp.pl")},
       {Tesla.Middleware.Headers,
        [
          {"user-agent",
