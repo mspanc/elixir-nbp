@@ -4,8 +4,8 @@
 
 # NBP
 
-This package implements a [public API](http://api.nbp.pl) of National Bank of 
-Poland (in Polish: Narodowy Bank Polski). 
+This package implements a [public API](http://api.nbp.pl) of the National Bank of 
+Poland (in Polish: NBP or Narodowy Bank Polski). 
 
 ## Installation
 
